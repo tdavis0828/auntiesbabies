@@ -281,6 +281,21 @@ export const StyledFooter = styled.footer`
     justify-content: center;
     align-items: center;
     border-left: 1px solid ${white};
+    font-family: ${primaryFont};
+    text-align: center;
+    font-size: 1.15rem;
+    & h3 {
+      font-weight: 400;
+      font-size: 1.35rem;
+      text-decoration: underline;
+    }
+    & a {
+      color: ${white};
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
     &:first-child {
       border-left: none;
     }
