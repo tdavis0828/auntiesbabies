@@ -14,7 +14,7 @@ export const StyledNavbar = styled.nav`
   justify-content: space-around;
   align-items: center;
   background: ${white};
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 10;
   & div {
@@ -62,7 +62,7 @@ export const StyledHome = styled.main`
 `;
 
 export const StyledHero = styled.section`
-  height: 65vh;
+  height: 45vh;
   width: 100%;
   background: url('https://images.unsplash.com/photo-1444840535719-195841cb6e2b');
   background-position: center;
@@ -79,7 +79,6 @@ export const StyledHero = styled.section`
     font-family: 'Mukta';
     font-weight: 200;
     font-size: 3rem;
-    transform: translateY(100px);
   }
   & .overlay {
     position: absolute;
@@ -90,7 +89,7 @@ export const StyledHero = styled.section`
   }
 `;
 
-export const StyledHeader = styled.div`
+export const StyledBanner = styled.div`
   height: 55px;
   width: 100%;
   background: ${green};
@@ -103,7 +102,7 @@ export const StyledHeader = styled.div`
   font-weight: 200;
 `;
 
-export const StyledSectionOne = styled.div`
+export const StyledAgeRange = styled.div`
   height: 60vh;
   width: 100%;
   display: flex;
@@ -121,6 +120,25 @@ export const StyledSectionOne = styled.div`
     border-radius: 10px;
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
     margin: 0 2rem;
+    position: relative;
+    overflow: hidden;
+    & .back {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(350px);
+      transition: all 0.25s ease-in;
+      &.open {
+        transition: all 0.25s ease-in;
+        transform: translateY(0);
+      }
+    }
     & h1 {
       font-weight: 400;
     }
@@ -133,15 +151,27 @@ export const StyledSectionOne = styled.div`
     }
     &.one {
       background: ${red};
+      & .back {
+        background: ${red};
+      }
     }
     &.two {
       background: ${blue};
+      & .back {
+        background: ${blue};
+      }
     }
     &.three {
       background: ${green};
+      & .back {
+        background: ${green};
+      }
     }
     &.four {
       background: #f5dd61;
+      & .back {
+        background: #f5dd61;
+      }
     }
   }
 `;
@@ -160,8 +190,8 @@ export const StyledMissionStatement = styled.div`
     &.image-container {
       justify-content: flex-end;
       & img {
-        height: 550px;
-        width: 550px;
+        height: 600px;
+        width: 600px;
         border-radius: 50%;
         padding: 1rem;
       }
@@ -236,7 +266,7 @@ export const StyledReviews = styled.div`
   }
   & .review-container {
     height: 25%;
-    width: 65%;
+    width: 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -268,8 +298,8 @@ export const StyledReviews = styled.div`
 export const StyledFooter = styled.footer`
   height: 25vh;
   width: 100%;
-  background: ${blue};
-  color: ${white};
+  background: ${white};
+  ${'' /* color: ${white}; */}
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -284,6 +314,21 @@ export const StyledFooter = styled.footer`
     font-family: ${primaryFont};
     text-align: center;
     font-size: 1.15rem;
+    &.one {
+      background: ${red};
+      color: ${white};
+    }
+    &.two {
+      border-top: 2px solid ${blue};
+      background: ${blue};
+      color: ${white};
+    }
+    &.three {
+      border-top: 2px solid ${green};
+      border-left: 2px solid ${blue};
+      background: ${green};
+      color: ${white};
+    }
     & h3 {
       font-weight: 400;
       font-size: 1.35rem;

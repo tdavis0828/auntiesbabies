@@ -5,13 +5,13 @@ function Footer() {
   const year = new Date().getFullYear();
   return (
     <StyledFooter>
-      <div>
+      <div className="one">
         <p>Auntie's Babies Family Day Care</p>
         <p>3409 Westchester Ave, Bakersfield, CA, United States, California</p>
         <p>(661) 670-4031</p>
         <p>abchildcare15@outlook.com</p>
       </div>
-      <div>
+      <div className="two">
         <h3>Site Map</h3>
         <Link to="/">Curriculum</Link>
         <Link to="/">About</Link>
@@ -19,7 +19,7 @@ function Footer() {
         <Link to="/">Schedule a tour</Link>
         <Link to="/">Registration</Link>
       </div>
-      <div>
+      <div className="three">
         <a href="/">Privacy Policy</a>
         <a href="/">Accessibility</a>
         <a href="/">Your Rights</a>
