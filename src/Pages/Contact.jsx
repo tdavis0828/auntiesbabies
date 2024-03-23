@@ -8,8 +8,15 @@ function Contact() {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
+  const contactSubmission = {
+    name,
+    email,
+    phoneNumber,
+    subject,
+    message,
+  };
   function handleSubmit() {
-    console.log('submitted');
+    console.log(contactSubmission);
   }
 
   return (

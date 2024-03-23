@@ -53,7 +53,7 @@ export const StyledContact = styled.main`
     & .info-container {
       height: 100%;
       width: 100%;
-      text-align: right;
+      text-align: center;
       font-size: 1.5rem;
       align-items: flex-end;
       & h2 {
@@ -77,6 +77,7 @@ export const StyledContact = styled.main`
         font-size: 1.15rem;
         margin-top: 10px;
         cursor: pointer;
+        transform: translateX(-150px);
       }
     }
     & .form-container {
