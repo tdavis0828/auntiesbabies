@@ -1,10 +1,23 @@
+import { useState } from 'react';
 import { StyledNavbar } from '../Styles/HomeStyleSheet';
 import { Link } from 'react-router-dom';
 import logo from '../images/auntiesBabiesLogo.png';
+import hamburger from '../images/hamburger.png';
 
 function Navbar() {
+  const [navIsOpen, setNavisOpen] = useState(true);
+
   return (
-    <StyledNavbar>
+    <StyledNavbar className={navIsOpen ? 'open' : ''}>
+      <div className="open-btn-container">
+        <img
+          src={hamburger}
+          alt="hamburger menu button"
+          onClick={() =>
+            !navIsOpen ? setNavisOpen(true) : setNavisOpen(false)
+          }
+        />
+      </div>
       <div className="logo">
         <img src={logo} alt="Aunties babies logo" />
       </div>

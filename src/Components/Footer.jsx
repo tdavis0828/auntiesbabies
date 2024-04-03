@@ -7,7 +7,9 @@ function Footer() {
     <StyledFooter>
       <div className="one">
         <p>Auntie's Babies Family Day Care</p>
-        <p>3409 Westchester Ave, Bakersfield, CA, United States, California</p>
+        <p className="address">
+          3409 Westchester Ave, Bakersfield, CA, United States, California
+        </p>
         <p>(661) 670-4031</p>
         <p>abchildcare15@outlook.com</p>
       </div>

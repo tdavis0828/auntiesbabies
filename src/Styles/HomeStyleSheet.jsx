@@ -13,14 +13,17 @@ export const StyledNavbar = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: ${white};
   position: sticky;
   top: 0;
   z-index: 10;
+  background: ${white};
   & div {
     display: flex;
     justify-content: center;
     align-items: center;
+    &.open-btn-container {
+      display: none;
+    }
     &.logo {
       & img {
         height: 200px;
@@ -55,10 +58,76 @@ export const StyledNavbar = styled.nav`
       }
     }
   }
+
+  @media (max-width: 1024px) {
+    & div {
+      &.logo {
+        & img {
+          height: 150px;
+          width: 150px;
+          margin-left: 10px;
+        }
+      }
+      & .nav-link {
+        padding: 0.25rem 1rem;
+        font-size: 1rem;
+      }
+      & p {
+        font-size: 1rem;
+        &.contact-number {
+          padding: 0.25rem 1rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    width: 200px;
+    height: 100vh;
+    flex-direction: column;
+    transform: translateX(-200px);
+    transition: all 0.35s ease;
+    position: fixed;
+    &.open {
+      transition: all 0.35s ease;
+      transform: translateX(0);
+    }
+    & div {
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+      &.open-btn-container {
+        display: block;
+        background: ${white};
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        top: 10px;
+        right: -77px;
+        padding: 1rem;
+        border-radius: 0 5px 5px 0;
+        & img {
+          height: 45px;
+          width: 45px;
+        }
+      }
+      &.close-btn-container {
+        height: 20%;
+        & .close-btn {
+          background: none;
+          border: none;
+          font-size: 1.25rem;
+          font-family: ${primaryFont};
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 `;
+
 export const StyledHome = styled.main`
   width: 100%;
-  background: ${white};
 `;
 
 export const StyledHero = styled.section`
@@ -134,6 +203,10 @@ export const StyledAgeRange = styled.div`
       align-items: center;
       transform: translateY(350px);
       transition: all 0.25s ease-in;
+      & p {
+        font-size: 1.35rem;
+        width: 60%;
+      }
       &.open {
         transition: all 0.25s ease-in;
         transform: translateY(0);
@@ -168,9 +241,16 @@ export const StyledAgeRange = styled.div`
       }
     }
     &.four {
-      background: #f5dd61;
+      background: #ffc94a;
       & .back {
-        background: #f5dd61;
+        background: #ffc94a;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    & .card {
+      & h1 {
+        font-size: 1.65rem;
       }
     }
   }
@@ -190,8 +270,8 @@ export const StyledMissionStatement = styled.div`
     &.image-container {
       justify-content: flex-end;
       & img {
-        height: 600px;
-        width: 600px;
+        height: 550px;
+        width: 550px;
         border-radius: 50%;
         padding: 1rem;
       }
@@ -200,17 +280,56 @@ export const StyledMissionStatement = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      font-size: 1.5rem;
+      font-size: 1.35rem;
       font-family: ${primaryFont};
       font-weight: 300;
       text-align: left;
       margin-left: 100px;
-
-      & .sub-header {
-        margin: 1rem 0;
-      }
       & .text {
+        margin: 10px 0;
         width: 50%;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    div {
+      &.image-container {
+        & img {
+          height: 400px;
+          width: 400px;
+        }
+      }
+      &.statement-container {
+        margin-left: 50px;
+        font-size: 1.25rem;
+        & .sub-header {
+          margin: 0.5rem 0;
+        }
+        & .text {
+          width: 65%;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    div {
+      &.image-container {
+        & img {
+          height: 350px;
+          width: 350px;
+        }
+      }
+      &.statement-container {
+        font-size: 1.15rem;
+        & .header {
+          margin: 0;
+        }
+        & .sub-header {
+          ${'' /* margin: 0; */}
+        }
+        & .text {
+          margin: 0;
+        }
       }
     }
   }
@@ -237,7 +356,6 @@ export const StyledImageGallery = styled.div`
     position: relative;
     padding: 2rem;
     & div {
-      background: blue;
       & img {
         height: 100%;
         width: 100%;
@@ -265,7 +383,7 @@ export const StyledReviews = styled.div`
     font-size: 2rem;
   }
   & .review-container {
-    height: 25%;
+    height: 30%;
     width: 50%;
     text-align: center;
     display: flex;
@@ -289,8 +407,16 @@ export const StyledReviews = styled.div`
     }
     & p {
       width: 50%;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 300;
+      margin: 0;
+    }
+  }
+  @media (max-width: 1024px) {
+    height: 120vh;
+    & .review-container {
+      width: 75%;
+      height: 25%;
     }
   }
 `;
@@ -298,8 +424,6 @@ export const StyledReviews = styled.div`
 export const StyledFooter = styled.footer`
   height: 25vh;
   width: 100%;
-  background: ${white};
-  ${'' /* color: ${white}; */}
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -317,9 +441,13 @@ export const StyledFooter = styled.footer`
     &.one {
       background: ${red};
       color: ${white};
+      border-top: 2px solid ${red};
+      border-right: 2px solid ${red};
     }
     &.two {
       border-top: 2px solid ${blue};
+      border-left: 2px solid ${blue};
+
       background: ${blue};
       color: ${white};
     }
@@ -329,10 +457,14 @@ export const StyledFooter = styled.footer`
       background: ${green};
       color: ${white};
     }
+    & p {
+      margin: 0;
+    }
     & h3 {
       font-weight: 400;
       font-size: 1.35rem;
       text-decoration: underline;
+      margin: 0;
     }
     & a {
       color: ${white};
@@ -343,6 +475,18 @@ export const StyledFooter = styled.footer`
     }
     &:first-child {
       border-left: none;
+    }
+  }
+  @media (max-width: 1024px) {
+    & div {
+      font-size: 0.95rem;
+      &.one {
+        & p {
+          &.address {
+            width: 80%;
+          }
+        }
+      }
     }
   }
 `;

@@ -14,7 +14,7 @@ import img14 from '../images/car-vroom.jpg';
 import img15 from '../images/swim-lessons.jpg';
 import img16 from '../images/color.jpg';
 
-function SectionThree() {
+function ImageGallery() {
   const imgArr = [
     img1,
     img2,
@@ -38,10 +38,9 @@ function SectionThree() {
         <h2>Activities For The Kiddos</h2>
       </div>
       <div className="gallery-container">
-        {imgArr.map((img) => {
-          console.log(img);
+        {imgArr.map((img, i) => {
           return (
-            <div>
+            <div key={i}>
               <img src={img} alt="/" />
             </div>
           );
@@ -51,4 +50,4 @@ function SectionThree() {
   );
 }
 
-export default SectionThree;
+export default ImageGallery;

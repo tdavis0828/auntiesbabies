@@ -3,6 +3,7 @@ import { StyledAgeRange } from '../Styles/HomeStyleSheet';
 import babyBottle from '../images/baby-bottle.png';
 import schoolHouse from '../images/kindergarten.png';
 import preschool from '../images/boy.png';
+import toddler from '../images/baby-boy.png';
 
 function AgeRange() {
   const [isOneOpen, setIsOneOpen] = useState(false);
@@ -19,11 +20,14 @@ function AgeRange() {
         }}
         onMouseLeave={() => setIsOneOpen(false)}
       >
-        <h1>Toddlers</h1>
-        <p>12 months - 3 years</p>
+        <h1>Infants</h1>
+        <p> 4 - 12 months</p>
         <img src={babyBottle} alt="baby bottle" />
         <div className={isOneOpen ? 'back open' : 'back'}>
-          <p>testing</p>
+          <p>
+            Our Early educators will teach your child how to enjoy learning
+            through play
+          </p>
         </div>
       </div>
       <div
@@ -32,10 +36,12 @@ function AgeRange() {
         onMouseLeave={() => setIsTwoOpen(false)}
       >
         <h1>Toddlers</h1>
-        <p>12 months - 3 years</p>
-        <img src={babyBottle} alt="baby bottle" />
+        <p>1 - 3 years</p>
+        <img src={toddler} alt="baby bottle" />
         <div className={isTwoOpen ? 'back open' : 'back'}>
-          <p>testing</p>
+          <p>
+            Our daycare hours are created to get toddlers ready for kindergarten
+          </p>
         </div>
       </div>
       <div
@@ -47,7 +53,10 @@ function AgeRange() {
         <p>3-5 years</p>
         <img src={preschool} alt="school house" />
         <div className={isThreeOpen ? 'back open' : 'back'}>
-          <p>testing</p>
+          <p>
+            We provide them with games, worksheets, and other fun activities to
+            help kids practice letters, numbers and more!
+          </p>
         </div>
       </div>
       <div
@@ -56,10 +65,13 @@ function AgeRange() {
         onMouseLeave={() => setIsFourOpen(false)}
       >
         <h1>School aged</h1>
-        <p>5-12 years</p>
+        <p>5-13 years</p>
         <img src={schoolHouse} alt="school house" />
         <div className={isFourOpen ? 'back open' : 'back'}>
-          <p>testing</p>
+          <p>
+            We support after school tutoring as well as bridge the gap for early
+            learners to develop social emotional skills
+          </p>
         </div>
       </div>
     </StyledAgeRange>
