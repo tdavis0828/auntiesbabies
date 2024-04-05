@@ -156,6 +156,12 @@ export const StyledHero = styled.section`
     height: 100%;
     width: 100%;
   }
+  @media (max-width: 425px) {
+    text-align: center;
+    & h2 {
+      font-size: 2.75rem;
+    }
+  }
 `;
 
 export const StyledBanner = styled.div`
@@ -203,9 +209,11 @@ export const StyledAgeRange = styled.div`
       align-items: center;
       transform: translateY(350px);
       transition: all 0.25s ease-in;
+      text-align: center;
       & p {
         font-size: 1.35rem;
         width: 60%;
+        line-height: 1.65rem;
       }
       &.open {
         transition: all 0.25s ease-in;
@@ -252,6 +260,28 @@ export const StyledAgeRange = styled.div`
       & h1 {
         font-size: 1.65rem;
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    & .card {
+      height: 300px;
+      width: 200px;
+      margin: auto;
+      & .back {
+        & p {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    grid-template-columns: repeat(1, 1fr);
+    & .card {
+      margin: 1rem auto;
     }
   }
 `;
@@ -320,16 +350,32 @@ export const StyledMissionStatement = styled.div`
         }
       }
       &.statement-container {
-        font-size: 1.15rem;
+        font-size: 1rem;
         & .header {
           margin: 0;
         }
-        & .sub-header {
-          ${'' /* margin: 0; */}
-        }
         & .text {
-          margin: 0;
+          width: 75%;
         }
+      }
+    }
+  }
+  @media (max-width: 425px) {
+    height: 100%;
+    flex-direction: column;
+    & div {
+      &.image-container {
+        justify-content: center;
+        & img {
+          height: 275px;
+          width: 275px;
+        }
+      }
+      &.statement-container {
+        align-items: center;
+        text-align: center;
+        font-size: 1.15rem;
+        margin: 0;
       }
     }
   }
@@ -367,6 +413,23 @@ export const StyledImageGallery = styled.div`
   & h1 {
     position: absolute;
   }
+  @media (max-width: 768px) {
+    & .gallery-container {
+      padding: 0.5rem;
+    }
+  }
+  @media (max-width: 425px) {
+    & .gallery-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 320px) {
+    & .header-container {
+      & h2 {
+        font-size: 1.75rem;
+      }
+    }
+  }
 `;
 
 export const StyledReviews = styled.div`
@@ -393,6 +456,7 @@ export const StyledReviews = styled.div`
     color: ${white};
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
     margin: 0.75rem 0;
+    line-height: 1.75rem;
     &.one {
       background: ${red};
       border-radius: 0 20px 20px 20px;
@@ -417,6 +481,18 @@ export const StyledReviews = styled.div`
     & .review-container {
       width: 75%;
       height: 25%;
+    }
+  }
+  @media (max-width: 425px) {
+    & .review-header {
+      text-align: center;
+    }
+    & .review-container {
+      & p {
+        font-size: 1rem;
+        width: 80%;
+        line-height: 1.5rem;
+      }
     }
   }
 `;
@@ -487,6 +563,12 @@ export const StyledFooter = styled.footer`
           }
         }
       }
+    }
+  }
+  @media (max-width: 425px) {
+    flex-direction: column;
+    & div {
+      padding: 1rem 0;
     }
   }
 `;

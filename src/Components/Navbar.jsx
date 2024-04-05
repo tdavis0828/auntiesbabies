@@ -5,7 +5,7 @@ import logo from '../images/auntiesBabiesLogo.png';
 import hamburger from '../images/hamburger.png';
 
 function Navbar() {
-  const [navIsOpen, setNavisOpen] = useState(true);
+  const [navIsOpen, setNavisOpen] = useState(false);
 
   return (
     <StyledNavbar className={navIsOpen ? 'open' : ''}>
