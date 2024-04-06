@@ -7,7 +7,7 @@ const green = '#65b741';
 const primaryFont = 'Mukta';
 
 export const StyledTour = styled.main`
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   background: ${white};
   display: flex;
@@ -15,6 +15,31 @@ export const StyledTour = styled.main`
   justify-content: center;
   align-items: center;
   font-family: ${primaryFont};
+  & .header {
+    height: 45vh;
+    width: 100%;
+    background: url('https://images.unsplash.com/photo-1567746455504-cb3213f8f5b8');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: ${white};
+    position: relative;
+    & p {
+      z-index: 9;
+      font-size: 4rem;
+      font-weight: 200;
+    }
+    & .overlay {
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.25);
+      position: absolute;
+      top: 0;
+    }
+  }
   & form {
     padding: 3rem 2rem;
     display: flex;

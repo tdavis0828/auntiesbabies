@@ -4,6 +4,7 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Tour from './Pages/Tour';
+import Programs from './Pages/Programs';
 import Footer from './Components/Footer';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="tour" element={<Tour />} />
+        <Route path="programs" element={<Programs />} />
       </Routes>
       <Footer />
     </div>

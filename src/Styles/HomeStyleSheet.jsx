@@ -456,22 +456,22 @@ export const StyledReviews = styled.div`
     color: ${white};
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
     margin: 0.75rem 0;
-    line-height: 1.75rem;
+    line-height: 1.85rem;
     &.one {
       background: ${red};
-      border-radius: 0 20px 20px 20px;
+      border-radius: 20px;
     }
     &.two {
       background: ${blue};
-      border-radius: 20px 0 20px 20px;
+      border-radius: 20px;
     }
     &.three {
       background: ${green};
-      border-radius: 0 20px 20px 20px;
+      border-radius: 20px;
     }
     & p {
-      width: 50%;
-      font-size: 1.2rem;
+      width: 70%;
+      font-size: 1.25rem;
       font-weight: 300;
       margin: 0;
     }

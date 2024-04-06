@@ -29,7 +29,7 @@ export const StyledContact = styled.main`
       color: ${white};
       font-family: ${primaryFont};
       font-size: 4rem;
-      font-weight: 300;
+      font-weight: 200;
     }
     & .overlay {
       height: 100%;
@@ -62,6 +62,7 @@ export const StyledContact = styled.main`
       & p {
         width: 50%;
         font-weight: 300;
+        margin: 0;
         &.hours {
           font-size: 1.75rem;
           font-weight: 500;

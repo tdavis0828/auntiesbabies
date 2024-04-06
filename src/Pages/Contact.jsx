@@ -33,7 +33,7 @@ function Contact() {
             to us by giving us a call or here through email.
           </p>
           <p className="hours">Hours</p>
-          <p>Mon-Fri: 6:00am-7:30pm</p>
+          <p>Mon-Sun: 6:00am-12:00am</p>
           <button>Schedule A Tour</button>
         </div>
         <div className="form-container">

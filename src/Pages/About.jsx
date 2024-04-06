@@ -14,7 +14,6 @@ function About() {
         <p>Owner & CEO of Auntie's Babies</p>
       </div>
       <div className="content-container">
-        <h1>Who I am</h1>
         <p>
           Shanita started her business when she became a parent. Fueled by a
           strong conviction, she embarked on the journey to assist other mothers
@@ -32,19 +31,7 @@ function About() {
         </p>
       </div>
       <div className="content-container">
-        <h1>The Vision</h1>
-        <p>
-          Just before COVID, Shanita found the Kern Women&#39;s Business
-          Center&#39;s Start, Run &amp; Grow program (now Explore, Design &amp;
-          Launch). In that program, she learned about business plans, how to
-          expand her business, organizational structures, business taxes and
-          more. She is pleased to report that her business has been a wonderful
-          resource to give single mother hope and to provide support for another
-          single mother.
-        </p>
-      </div>
-      <div className="content-container">
-        <h1>Important Values</h1>
+        <h1>The Values</h1>
         <p>
           Shanita firmly believes that &quot;we are stronger together, and
           it&#39;s crucial for us all to unite to uphold our community&#39;s
@@ -54,6 +41,18 @@ function About() {
           that her resilience can serve as a hope for others, particularly young
           single parents. Her journey isn&#39;t just about survival—it&#39;s
           about triumphing over adversity and inspiring others to do the same.
+        </p>
+      </div>
+      <div className="content-container">
+        <h1>The Vision</h1>
+        <p>
+          Just before COVID, Shanita found the Kern Women&#39;s Business
+          Center&#39;s Start, Run &amp; Grow program (now Explore, Design &amp;
+          Launch). In that program, she learned about business plans, how to
+          expand her business, organizational structures, business taxes and
+          more. She is pleased to report that her business has been a wonderful
+          resource to give single mother hope and to provide support for another
+          single mother.
         </p>
       </div>
     </StyledAbout>

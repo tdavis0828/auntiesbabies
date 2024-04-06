@@ -27,7 +27,11 @@ function Tour() {
   }
   return (
     <StyledTour>
-      <h1>Schedule a tour</h1>
+      <div className="header">
+        <div className="overlay" />
+        <p>Schedule a tour</p>
+      </div>
+
       <form onSubmit={handleSubmit}>
         <div>
           <input
