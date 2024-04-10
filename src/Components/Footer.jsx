@@ -8,7 +8,7 @@ function Footer() {
       <div className="one">
         <p>Auntie's Babies Family Day Care</p>
         <p className="address">
-          3409 Westchester Ave, Bakersfield, CA, United States, California
+          3409 Westchester Ave, Bakersfield, CA, United States, California 93309
         </p>
         <p>(661) 670-4031</p>
         <p>abchildcare15@outlook.com</p>

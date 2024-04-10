@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import background from '../images/background.png';
 
 export const GlobalStyles = createGlobalStyle`
     body {
@@ -7,9 +8,7 @@ export const GlobalStyles = createGlobalStyle`
         scroll-behavior: smooth;
         box-sizing: border-box;
         background: #fefbf6;
-        ${
-          '' /* background: url('https://images.unsplash.com/photo-1546074177-ffdda98d214f'); */
-        }
+        background-image: url(${background});  
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -26,6 +25,7 @@ export const GlobalStyles = createGlobalStyle`
     /* Handle */
     &::-webkit-scrollbar-thumb {
     background: #888;
+    border-radius: 5px;
 }
 
     }

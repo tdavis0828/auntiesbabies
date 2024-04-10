@@ -39,7 +39,7 @@ function Navbar() {
         <Link to="tour" className="nav-link tour">
           Schedule A Tour
         </Link>
-        <Link to="/" className="nav-link registration">
+        <Link to="registration" className="nav-link registration">
           Registration
         </Link>
         <p className="contact-number">(661) 670-4031</p>

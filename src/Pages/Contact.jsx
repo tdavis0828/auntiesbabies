@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { StyledContact } from '../Styles/ContactStylesheet';
 
 function Contact() {
@@ -7,16 +8,35 @@ function Contact() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const form = useRef();
 
-  const contactSubmission = {
-    name,
-    email,
-    phoneNumber,
-    subject,
-    message,
-  };
-  function handleSubmit() {
-    console.log(contactSubmission);
+  function handleSubmit(e) {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        'service_sktr7g1',
+        'template_ka7x7ys',
+        form.current,
+        'uHBGQxiG0Tp_1kI1r'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setName('');
+          setPhoneNumber('');
+          setEmail('');
+          setMessage('');
+          // setShowAlert(true);
+
+          // setTimeout(() => {
+          //   setShowAlert(false);
+          // }, 3000);
+        },
+
+        (error) => {
+          console.log(error.text);
+        }
+      );
   }
 
   return (
@@ -37,7 +57,7 @@ function Contact() {
           <button>Schedule A Tour</button>
         </div>
         <div className="form-container">
-          <form onSubmit={handleSubmit}>
+          <form ref={form} onSubmit={handleSubmit}>
             <div>
               <input
                 className="name"

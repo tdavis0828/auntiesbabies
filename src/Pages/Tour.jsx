@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { StyledTour } from '../Styles/TourStylesheet';
+import emailjs from '@emailjs/browser';
 
 function Tour() {
   const [parentName, setParentName] = useState('');
@@ -10,20 +11,39 @@ function Tour() {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [comments, setComments] = useState('');
+  const form = useRef();
 
-  const formSubmission = {
-    parentName,
-    childName,
-    childAge,
-    email,
-    phoneNumber,
-    date,
-    time,
-    comments,
-  };
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(formSubmission);
+    emailjs
+      .sendForm(
+        'service_sktr7g1',
+        'template_rtpmphj',
+        form.current,
+        'uHBGQxiG0Tp_1kI1r'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setParentName('');
+          setChildName('');
+          setChildAge('');
+          setDate('');
+          setTime('');
+          setPhoneNumber('');
+          setEmail('');
+          setComments('');
+          // setShowAlert(true);
+
+          // setTimeout(() => {
+          //   setShowAlert(false);
+          // }, 3000);
+        },
+
+        (error) => {
+          console.log(error.text);
+        }
+      );
   }
   return (
     <StyledTour>
@@ -32,7 +52,7 @@ function Tour() {
         <p>Schedule a tour</p>
       </div>
 
-      <form onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={handleSubmit}>
         <div>
           <input
             type="text"
@@ -95,7 +115,6 @@ function Tour() {
             name="time"
             value={time}
             onChange={(e) => {
-              console.log(e.target.value);
               setTime(e.target.value);
             }}
             required

@@ -42,4 +42,58 @@ export const StyledPrograms = styled.main`
       font-weight: 200;
     }
   }
+  & .text-container {
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: ${primaryFont};
+    font-size: 1.25rem;
+    & p {
+      width: 50%;
+    }
+    &.one {
+      text-align: center;
+    }
+    &.two {
+      flex-direction: row;
+      & p {
+        width: 80%;
+      }
+    }
+    &.three {
+      height: 30vh;
+      position: relative;
+      & h4 {
+        position: absolute;
+        top: 0;
+      }
+      & p {
+        width: 90%;
+      }
+      flex-direction: row;
+    }
+    &.four {
+      height: 35vh;
+      text-align: center;
+      & h4 {
+        margin: 0;
+      }
+      & p {
+        width: 50%;
+      }
+    }
+    &.five {
+      height: 30vh;
+      flex-direction: row;
+      position: relative;
+      & h4 {
+        position: absolute;
+        top: 0;
+        margin: 0;
+      }
+    }
+  }
 `;

@@ -7,6 +7,7 @@ const white = '#fefbf6';
 const green = '#65b741';
 const primaryFont = 'Mukta';
 
+// Styling for nav bar
 export const StyledNavbar = styled.nav`
   height: 200px;
   width: 100%;
@@ -165,14 +166,14 @@ export const StyledHero = styled.section`
 `;
 
 export const StyledBanner = styled.div`
-  height: 55px;
+  height: 80px;
   width: 100%;
   background: ${green};
   display: flex;
   justify-content: center;
   align-items: center;
   color: ${white};
-  font-size: 1.5rem;
+  font-size: 2.15rem;
   font-family: ${primaryFont};
   font-weight: 200;
 `;
@@ -310,14 +311,16 @@ export const StyledMissionStatement = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      font-size: 1.35rem;
+      font-size: 1.65rem;
       font-family: ${primaryFont};
-      font-weight: 300;
+      font-weight: 400;
       text-align: left;
       margin-left: 100px;
       & .text {
         margin: 10px 0;
-        width: 50%;
+        width: 70%;
+        border-radius: 5px;
+        line-height: 2rem;
       }
     }
   }

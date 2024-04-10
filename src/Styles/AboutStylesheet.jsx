@@ -10,7 +10,6 @@ const primaryFont = 'Mukta';
 export const StyledAbout = styled.main`
   height: 100%;
   width: 100%;
-  background: ${white};
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -5,6 +5,7 @@ import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Tour from './Pages/Tour';
 import Programs from './Pages/Programs';
+import Registration from './Pages/Registration';
 import Footer from './Components/Footer';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="tour" element={<Tour />} />
         <Route path="programs" element={<Programs />} />
+        <Route path="registration" element={<Registration />} />
       </Routes>
       <Footer />
     </div>
