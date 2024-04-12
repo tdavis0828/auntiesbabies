@@ -101,6 +101,7 @@ export const StyledAbout = styled.main`
     & div {
       &.content-container {
         text-align: center;
+        width: 85%;
       }
     }
   }
