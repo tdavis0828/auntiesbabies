@@ -50,7 +50,7 @@ export const StyledAbout = styled.main`
       }
     }
     &.image-container {
-      margin-top: 30px;
+      margin-top: 60px;
       display: flex;
       flex-direction: column;
       justify-content: center;

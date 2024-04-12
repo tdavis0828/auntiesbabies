@@ -140,6 +140,11 @@ export const StyledPrograms = styled.main`
   }
   @media (max-width: 425px) {
     height: 275vh;
+    & .header {
+      position: absolute;
+      top: 0;
+    }
+
     & .text-container {
       font-size: 1rem;
       & p {
