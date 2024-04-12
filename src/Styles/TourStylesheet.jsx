@@ -102,7 +102,11 @@ export const StyledTour = styled.main`
   }
 
   @media (max-width: 425px) {
-    height: 120vh;
+    height: 175vh;
+    & .header {
+      position: absolute;
+      top: 0;
+    }
     & form {
       padding: 0;
       padding-top: 1rem;
