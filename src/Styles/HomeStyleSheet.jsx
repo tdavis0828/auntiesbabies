@@ -271,7 +271,7 @@ export const StyledAgeRange = styled.div`
     & .card {
       height: 300px;
       width: 200px;
-      margin: auto;
+      margin: 1rem auto;
       & .back {
         & p {
           font-size: 1.1rem;
@@ -340,6 +340,7 @@ export const StyledMissionStatement = styled.div`
         }
         & .text {
           width: 65%;
+          line-height: 1.5rem;
         }
       }
     }
@@ -353,12 +354,12 @@ export const StyledMissionStatement = styled.div`
         }
       }
       &.statement-container {
-        font-size: 1rem;
+        font-size: 1.15rem;
         & .header {
           margin: 0;
         }
         & .text {
-          width: 75%;
+          width: 85%;
         }
       }
     }

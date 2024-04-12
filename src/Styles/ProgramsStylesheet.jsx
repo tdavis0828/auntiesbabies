@@ -64,7 +64,6 @@ export const StyledPrograms = styled.main`
       }
     }
     &.three {
-      height: 30vh;
       position: relative;
       & h4 {
         position: absolute;
@@ -76,7 +75,6 @@ export const StyledPrograms = styled.main`
       flex-direction: row;
     }
     &.four {
-      height: 35vh;
       text-align: center;
       & h4 {
         margin: 0;
@@ -93,6 +91,82 @@ export const StyledPrograms = styled.main`
         position: absolute;
         top: 0;
         margin: 0;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    & .text-container {
+      &.one {
+        & p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    & .text-container {
+      & p {
+        width: 80%;
+      }
+      &.two {
+        & div {
+          padding: 3rem;
+          & p {
+            margin: 0;
+          }
+          & h4 {
+            margin: 10px 0;
+          }
+        }
+      }
+      &.three {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        & ul {
+          margin: auto;
+          padding-top: 2rem;
+        }
+        & h4 {
+          top: -10%;
+          left: 40%;
+        }
+      }
+      &.four {
+        & p {
+          width: 80%;
+        }
+      }
+    }
+  }
+  @media (max-width: 425px) {
+    & .text-container {
+      font-size: 1rem;
+      & p {
+        width: 95%;
+      }
+      &.two {
+        height: 50vh;
+        flex-direction: column;
+        & div {
+          width: 100%;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+      &.three {
+        & h4 {
+          top: 0;
+          left: 39%;
+        }
+      }
+      &.four {
+        & p {
+          width: 95%;
+        }
       }
     }
   }

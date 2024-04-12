@@ -9,7 +9,6 @@ const primaryFont = 'Mukta';
 export const StyledTour = styled.main`
   height: 100vh;
   width: 100%;
-  background: ${white};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,6 +98,63 @@ export const StyledTour = styled.main`
       background: ${green};
       color: ${white};
       cursor: pointer;
+    }
+  }
+
+  @media (max-width: 425px) {
+    height: 120vh;
+    & form {
+      padding: 0;
+      padding-top: 1rem;
+      & div {
+        & input {
+          width: 350px;
+          &.childName {
+            width: 300px;
+          }
+          &.childAge {
+            width: 35px;
+          }
+        }
+        & .comments {
+          width: 350px;
+        }
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    & .header {
+      & p {
+        font-size: 3rem;
+      }
+    }
+    & form {
+      & div {
+        & input {
+          width: 300px;
+          &.childName {
+            width: 245px;
+          }
+        }
+        & .comments {
+          width: 300px;
+        }
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    & form {
+      & div {
+        & input {
+          width: 275px;
+          &.childName {
+            width: 215px;
+          }
+        }
+        & .comments {
+          width: 275px;
+        }
+      }
     }
   }
 `;

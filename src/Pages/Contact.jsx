@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { StyledContact } from '../Styles/ContactStylesheet';
 
@@ -54,7 +55,7 @@ function Contact() {
           </p>
           <p className="hours">Hours</p>
           <p>Mon-Sun: 6:00am-12:00am</p>
-          <button>Schedule A Tour</button>
+          <Link to="/tour">Schedule A Tour</Link>
         </div>
         <div className="form-container">
           <form ref={form} onSubmit={handleSubmit}>

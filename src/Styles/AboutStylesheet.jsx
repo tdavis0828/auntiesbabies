@@ -105,6 +105,12 @@ export const StyledAbout = styled.main`
   }
   @media (max-width: 375px) {
     & div {
+      &.image-container {
+        & img {
+          height: 300px;
+          width: 225px;
+        }
+      }
       &.content-container {
         width: 80%;
         font-size: 1.1rem;

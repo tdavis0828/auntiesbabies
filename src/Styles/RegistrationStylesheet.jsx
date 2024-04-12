@@ -104,4 +104,51 @@ export const StyledRegistration = styled.main`
       }
     }
   }
+  @media (max-width: 425px) {
+    & .form-container {
+      & form {
+        & div {
+          & input,
+          select {
+            width: 350px;
+          }
+        }
+        & button {
+          width: 350px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    & .form-container {
+      & form {
+        & div {
+          & input,
+          select {
+            width: 300px;
+            font-size: 1rem;
+          }
+        }
+        & button {
+          width: 300px;
+        }
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    & .form-container {
+      & form {
+        & div {
+          & input,
+          select {
+            width: 250px;
+          }
+        }
+        & button {
+          width: 250px;
+        }
+      }
+    }
+  }
 `;

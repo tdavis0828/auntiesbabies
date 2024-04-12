@@ -68,6 +68,7 @@ function Tour() {
             type="text"
             name="childName"
             placeholder="Childs Name"
+            className="childName"
             value={childName}
             onChange={(e) => setChildName(e.target.value)}
             required

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { StyledNavbar } from '../Styles/HomeStyleSheet';
 import { Link } from 'react-router-dom';
 import logo from '../images/auntiesBabiesLogo.png';
