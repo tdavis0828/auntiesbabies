@@ -97,7 +97,7 @@ export const StyledAbout = styled.main`
     }
   }
   @media (max-width: 425px) {
-    height: 425vh;
+    height: 400vh;
     & div {
       &.content-container {
         text-align: center;
