@@ -99,16 +99,16 @@ export const StyledNavbar = styled.nav`
       &.open-btn-container {
         display: block;
         background: ${white};
-        height: 45px;
-        width: 45px;
+        height: 25px;
+        width: 25px;
         position: absolute;
         top: 10px;
-        right: -77px;
+        right: -57px;
         padding: 1rem;
         border-radius: 0 5px 5px 0;
         & img {
-          height: 45px;
-          width: 45px;
+          height: 25px;
+          width: 25px;
         }
       }
       &.close-btn-container {
