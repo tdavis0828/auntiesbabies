@@ -494,12 +494,12 @@ export const StyledReviews = styled.div`
     }
   }
   @media (max-width: 425px) {
-    height: 120vh;
+    height: 160vh;
     & .review-header {
       text-align: center;
     }
     & .review-container {
-      width: 400px;
+      width: 375px;
       height: 200px;
       & p {
         font-size: 1rem;
