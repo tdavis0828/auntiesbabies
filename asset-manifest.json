@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/auntiesbabies/static/js/main.86619f5d.js",
+    "main.js": "/auntiesbabies/static/js/main.d28a2a4d.js",
     "static/media/together.jpg": "/auntiesbabies/static/media/together.4d50d6b7e4f3f44c692b.jpg",
     "static/media/active-kasen.jpg": "/auntiesbabies/static/media/active-kasen.45fba326df489ab1cc39.jpg",
     "static/media/backyard.jpg": "/auntiesbabies/static/media/backyard.23b187d7f3815aa35e1e.jpg",
@@ -22,9 +22,9 @@
     "static/media/boy.png": "/auntiesbabies/static/media/boy.4b45556425c5beaa5a5c.png",
     "static/media/kindergarten.png": "/auntiesbabies/static/media/kindergarten.6f56755b028217ffcc49.png",
     "index.html": "/auntiesbabies/index.html",
-    "main.86619f5d.js.map": "/auntiesbabies/static/js/main.86619f5d.js.map"
+    "main.d28a2a4d.js.map": "/auntiesbabies/static/js/main.d28a2a4d.js.map"
   },
   "entrypoints": [
-    "static/js/main.86619f5d.js"
+    "static/js/main.d28a2a4d.js"
   ]
 }
