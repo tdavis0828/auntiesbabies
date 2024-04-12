@@ -179,8 +179,12 @@ export const StyledContact = styled.main`
   }
 
   @media (max-width: 425px) {
+    height: 200vh;
+    & .header {
+      position: absolute;
+      top: 0;
+    }
     & .container {
-      height: 125vh;
       & .info-container {
         justify-content: flex-start;
 
