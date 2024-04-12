@@ -8,19 +8,19 @@ const green = '#65b741';
 const primaryFont = 'Mukta';
 
 export const StyledAbout = styled.main`
-  height: 100%;
+  height: 240vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: ${primaryFont};
+  position: relative;
   & div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0;
     &.header {
       background: url('https://images.unsplash.com/photo-1650504149601-f9fdd445c187');
       background-position: center;
@@ -45,11 +45,16 @@ export const StyledAbout = styled.main`
         top: 0;
         height: 100%;
         width: 100%;
-        background: rgba(0, 0, 0, 0.25);
+        background: rgba(0, 0, 0, 0.45);
         margin: 0;
       }
     }
     &.image-container {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       & h4 {
         margin: 0;
         font-size: 1.5rem;
@@ -62,9 +67,10 @@ export const StyledAbout = styled.main`
       width: 40%;
       font-size: 1.15rem;
       font-family: ${primaryFont};
-      &:last-child {
-        padding-bottom: 5rem;
-      }
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
     }
     & h1 {
       font-weight: 400;
@@ -78,6 +84,10 @@ export const StyledAbout = styled.main`
 
   @media (max-width: 768px) {
     & div {
+      &.header {
+        position: absolute;
+        top: 0;
+      }
       &.image-container {
         & img {
           height: 350px;
@@ -97,7 +107,7 @@ export const StyledAbout = styled.main`
     }
   }
   @media (max-width: 425px) {
-    height: 400vh;
+    height: 375vh;
     & div {
       &.content-container {
         text-align: center;

@@ -88,6 +88,7 @@ export const StyledNavbar = styled.nav`
     transform: translateX(-200px);
     transition: all 0.35s ease;
     position: fixed;
+    top: 30px;
     &.open {
       transition: all 0.35s ease;
       transform: translateX(0);
