@@ -105,6 +105,11 @@ export const StyledRegistration = styled.main`
     }
   }
   @media (max-width: 425px) {
+    height: 220vh;
+    & .header {
+      position: absolute;
+      top: 0;
+    }
     & .form-container {
       & form {
         & div {

@@ -106,6 +106,9 @@ export const StyledTour = styled.main`
     & .header {
       position: absolute;
       top: 0;
+      & p {
+        font-size: 3rem;
+      }
     }
     & form {
       padding: 0;
@@ -127,11 +130,6 @@ export const StyledTour = styled.main`
     }
   }
   @media (max-width: 375px) {
-    & .header {
-      & p {
-        font-size: 3rem;
-      }
-    }
     & form {
       & div {
         & input {
