@@ -279,6 +279,12 @@ export const StyledAgeRange = styled.div`
       }
     }
   }
+  @media (max-width: 425px) {
+    grid-template-columns: repeat(1, 1fr);
+    & .card {
+      margin: 1rem auto;
+    }
+  }
   @media (max-width: 375px) {
     grid-template-columns: repeat(1, 1fr);
     & .card {
@@ -488,6 +494,7 @@ export const StyledReviews = styled.div`
     }
   }
   @media (max-width: 425px) {
+    height: 150vh;
     & .review-header {
       text-align: center;
     }
