@@ -180,8 +180,10 @@ export const StyledContact = styled.main`
 
   @media (max-width: 425px) {
     & .container {
-      height: 150vh;
+      height: 125vh;
       & .info-container {
+        justify-content: flex-start;
+
         & p {
           width: 85%;
         }
@@ -190,6 +192,8 @@ export const StyledContact = styled.main`
         & form {
           & div {
             flex-direction: column;
+            justify-content: flex-start;
+
             & input {
               width: 300px;
             }
