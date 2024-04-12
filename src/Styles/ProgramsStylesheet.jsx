@@ -139,6 +139,7 @@ export const StyledPrograms = styled.main`
     }
   }
   @media (max-width: 425px) {
+    height: 275vh;
     & .text-container {
       font-size: 1rem;
       & p {
