@@ -32,7 +32,8 @@ export const StyledAbout = styled.main`
       justify-content: center;
       align-items: center;
       font-family: ${primaryFont};
-      position: relative;
+      position: absolute;
+      top: 0;
       & p {
         font-family: ${primaryFont};
         color: ${white};

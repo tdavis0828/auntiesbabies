@@ -180,7 +180,7 @@ export const StyledContact = styled.main`
 
   @media (max-width: 425px) {
     & .container {
-      height: 120vh;
+      height: 150vh;
       & .info-container {
         & p {
           width: 85%;
@@ -191,15 +191,15 @@ export const StyledContact = styled.main`
           & div {
             flex-direction: column;
             & input {
-              width: 375px;
+              width: 300px;
             }
             & textarea {
-              width: 375px;
+              width: 300px;
               height: 100px;
             }
           }
           & button {
-            width: 375px;
+            width: 300px;
             font-size: 1rem;
             padding: 1rem;
           }
