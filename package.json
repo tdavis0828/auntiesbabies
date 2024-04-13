@@ -1,7 +1,7 @@
 {
   "name": "aunties-babies",
   "version": "0.1.0",
-  "homepage": "https://tdavis0828.github.io/auntiesbabies",
+  "homepage": "",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
