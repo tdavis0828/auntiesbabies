@@ -179,9 +179,15 @@ export const StyledContact = styled.main`
   }
 
   @media (max-width: 425px) {
+    height: 200vh;
+    & .header {
+      position: absolute;
+      top: 0;
+    }
     & .container {
-      height: 120vh;
       & .info-container {
+        justify-content: flex-start;
+
         & p {
           width: 85%;
         }
@@ -190,16 +196,18 @@ export const StyledContact = styled.main`
         & form {
           & div {
             flex-direction: column;
+            justify-content: flex-start;
+
             & input {
-              width: 375px;
+              width: 300px;
             }
             & textarea {
-              width: 375px;
+              width: 300px;
               height: 100px;
             }
           }
           & button {
-            width: 375px;
+            width: 300px;
             font-size: 1rem;
             padding: 1rem;
           }

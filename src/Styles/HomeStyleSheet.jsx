@@ -88,6 +88,7 @@ export const StyledNavbar = styled.nav`
     transform: translateX(-200px);
     transition: all 0.35s ease;
     position: fixed;
+    top: 0;
     &.open {
       transition: all 0.35s ease;
       transform: translateX(0);
@@ -99,16 +100,16 @@ export const StyledNavbar = styled.nav`
       &.open-btn-container {
         display: block;
         background: ${white};
-        height: 45px;
-        width: 45px;
+        height: 25px;
+        width: 25px;
         position: absolute;
         top: 10px;
-        right: -77px;
+        right: -57px;
         padding: 1rem;
         border-radius: 0 5px 5px 0;
         & img {
-          height: 45px;
-          width: 45px;
+          height: 25px;
+          width: 25px;
         }
       }
       &.close-btn-container {
@@ -277,6 +278,12 @@ export const StyledAgeRange = styled.div`
           font-size: 1.1rem;
         }
       }
+    }
+  }
+  @media (max-width: 425px) {
+    grid-template-columns: repeat(1, 1fr);
+    & .card {
+      margin: 1rem auto;
     }
   }
   @media (max-width: 375px) {
@@ -488,10 +495,13 @@ export const StyledReviews = styled.div`
     }
   }
   @media (max-width: 425px) {
+    height: 160vh;
     & .review-header {
       text-align: center;
     }
     & .review-container {
+      width: 375px;
+      height: 200px;
       & p {
         font-size: 1rem;
         width: 80%;
